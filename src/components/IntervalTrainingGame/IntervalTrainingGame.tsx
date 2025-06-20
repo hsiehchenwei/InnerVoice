@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback } from "react";
 import Button from "../Button/Button";
 import RootNotePlayer from "../RootNotePlayer/RootNotePlayer";
 import NotePlayButton from "../NotePlayButton/NotePlayButton";
