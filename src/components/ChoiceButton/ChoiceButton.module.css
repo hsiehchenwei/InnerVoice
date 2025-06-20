@@ -1,0 +1,94 @@
+.choiceButton {
+  min-height: 60px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid #e9ecef;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #495057;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 120px;
+  position: relative;
+}
+
+.choiceButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #ffffff 0%, #f1f3f4 100%);
+  border-color: #74b9ff;
+}
+
+.choiceButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.choiceButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.correct {
+  background: linear-gradient(135deg, #27ae60 0%, #229954 100%) !important;
+  border-color: #27ae60 !important;
+  color: white !important;
+  animation: correctPulse 0.6s ease-out;
+}
+
+.incorrect {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%) !important;
+  border-color: #e74c3c !important;
+  color: white !important;
+  animation: incorrectShake 0.6s ease-out;
+}
+
+.checkIcon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.crossIcon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@keyframes correctPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes incorrectShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-3px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(3px);
+  }
+}

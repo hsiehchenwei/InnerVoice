@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.corner {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 5;
+}
+
+.label {
+  font-size: 0.8rem;
+  color: #7a7a7a;
+  font-weight: 300;
+  margin-bottom: 4px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.noteLabel {
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.noteDisplay {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #495057;
+  background: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  min-width: 60px;
+}
+
+.tuningInfo {
+  font-size: 0.8rem;
+  color: #6c757d;
+  background: rgba(108, 117, 125, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.toggleButton {
+  min-width: 100px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+
+.toggleButton.small {
+  min-width: 80px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+}
+
+.playing {
+  background-color: #a8b2ac !important;
+  color: white !important;
+  border-color: #a8b2ac !important;
+}
+
+.playing:hover {
+  background-color: #9aa39d !important;
+  border-color: #9aa39d !important;
+}
+
+.playingIndicator {
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(39, 174, 96, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(39, 174, 96, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pulseIcon {
+  font-size: 1.2rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.playingText {
+  font-size: 0.9rem;
+  color: #27ae60;
+  font-weight: 500;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* 響應式設計 */
+@media (max-width: 480px) {
+  .info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .noteDisplay {
+    font-size: 1.2rem;
+  }
+
+  .toggleButton {
+    min-width: 120px;
+    padding: 10px 15px;
+  }
+
+  .playingIndicator {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

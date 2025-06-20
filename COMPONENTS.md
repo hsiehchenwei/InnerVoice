@@ -53,6 +53,48 @@
 - **用途**: 隨機音符 Demo
 - **用法**: `<RandomNote />`
 
+### IntervalTrainingGame
+
+- **路徑**: `src/components/IntervalTrainingGame/IntervalTrainingGame`
+- **用途**: 音程聽力訓練遊戲
+- **特點**: 10 題 C 大調音程識別，統計正確率，完整遊戲流程
+- **用法**: `<IntervalTrainingGame />`
+
+### AnonymousNoteButton
+
+- **路徑**: `src/components/AnonymousNoteButton/AnonymousNoteButton`
+- **用途**: 匿名音符按鈕，播放音符但不顯示音名
+- **特點**: 用於盲聽練習，支援調音標準和自定義標籤
+- **用法**: `<AnonymousNoteButton note="C" octave={4} tuningStandard={440} label="選項A" />`
+
+### RootNotePlayer
+
+- **路徑**: `src/components/RootNotePlayer/RootNotePlayer`
+- **用途**: 根音持續播放器
+- **特點**: 持續播放 sin 波+泛音，UI 簡潔，可控制開始/停止
+- **用法**: `<RootNotePlayer note="C" octave={4} isPlaying={true} onToggle={setPlaying} />`
+
+### NotePlayButton
+
+- **路徑**: `src/components/NotePlayButton/NotePlayButton`
+- **用途**: 音符播放按鈕，只負責播放聲音
+- **特點**: 短暫播放音符，有播放狀態指示
+- **用法**: `<NotePlayButton note="E" octave={4} tuningStandard={440} label="🔊 A" />`
+
+### ChoiceButton
+
+- **路徑**: `src/components/ChoiceButton/ChoiceButton`
+- **用途**: 選擇按鈕，只負責用戶選擇
+- **特點**: 支援選中狀態、正確/錯誤反饋動畫
+- **用法**: `<ChoiceButton label="選擇 A" onClick={handleClick} isSelected={true} isCorrect={true} />`
+
+### IntervalInfo
+
+- **路徑**: `src/components/IntervalInfo/IntervalInfo`
+- **用途**: 音程信息顯示組件
+- **特點**: 點擊音程名稱顯示浮動窗口，包含英文術語、別名、樂理知識
+- **用法**: `<IntervalInfo interval="增四度" />`
+
 ## 系統組件
 
 ### AppRouter

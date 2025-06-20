@@ -1,0 +1,71 @@
+.anonymousButton {
+  position: relative;
+  min-height: 60px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid #3498db;
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+  color: white;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.anonymousButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+  background: linear-gradient(135deg, #81c3ff 0%, #0f7ae5 100%);
+}
+
+.anonymousButton:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+.anonymousButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.playing {
+  background: linear-gradient(135deg, #00b894 0%, #00a085 100%) !important;
+  border-color: #00b894 !important;
+  animation: pulse 0.8s ease-in-out;
+}
+
+.playingIndicator {
+  font-size: 1.2rem;
+  animation: bounce 0.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}

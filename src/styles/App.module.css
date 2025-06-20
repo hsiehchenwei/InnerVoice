@@ -1,86 +1,99 @@
 .app {
   text-align: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #f8f6f4 0%, #e8e6e3 100%);
+  color: #4a4a4a;
 }
 
 .appHeader {
-  padding: 2rem;
+  padding: 3rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .appHeader h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  background: linear-gradient(45deg, #ffd700, #ff6b6b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  color: #5a5a5a;
+  letter-spacing: -1px;
 }
 
 .appHeader > p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
+  margin-bottom: 3rem;
+  color: #7a7a7a;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  font-weight: 300;
 }
 
 .demoLink {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
+  padding: 1rem 2.5rem;
+  background: #ffffff;
+  color: #6a6a6a;
   text-decoration: none;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  margin-bottom: 3rem;
+  border-radius: 30px;
+  border: 1px solid #d4c5b9;
+  margin-bottom: 4rem;
   transition: all 0.3s ease;
+  font-weight: 400;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .demoLink:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: translateY(-2px);
+  background: #f5f0ea;
+  border-color: #a8b2ac;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.gameSection {
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 0 1rem;
 }
 
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .featureCard {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
+  background: #ffffff;
+  border-radius: 12px;
   padding: 2rem;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid #e8e6e3;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .featureCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-color: #d4c5b9;
 }
 
 .featureIcon {
-  font-size: 3rem;
+  font-size: 2.5rem;
   display: block;
   margin-bottom: 1rem;
+  filter: grayscale(30%);
 }
 
 .featureCard h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
-  color: #ffd700;
+  color: #5a5a5a;
+  font-weight: 400;
 }
 
 .featureCard p {
   line-height: 1.6;
-  opacity: 0.9;
+  color: #7a7a7a;
+  font-weight: 300;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import IntervalTrainingGame from "./components/IntervalTrainingGame/IntervalTrainingGame";
 import styles from "./styles/App.module.css";
 
 const App: React.FC = () => {
@@ -12,6 +13,10 @@ const App: React.FC = () => {
         <Link to="/demo" className={styles.demoLink}>
           🧪 進入 Demo 測試系統
         </Link>
+
+        <div className={styles.gameSection}>
+          <IntervalTrainingGame />
+        </div>
 
         <div className={styles.features}>
           <div className={styles.featureCard}>

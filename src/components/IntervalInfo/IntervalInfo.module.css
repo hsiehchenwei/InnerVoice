@@ -1,0 +1,127 @@
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+.trigger {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 4px;
+  padding: 2px 6px;
+  transition: all 0.2s ease;
+}
+
+.trigger:hover {
+  background: rgba(231, 76, 60, 0.1);
+  transform: translateY(-1px);
+}
+
+.infoIcon {
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+
+.popup {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: white;
+  border: 2px solid #e74c3c;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  min-width: 280px;
+  max-width: 350px;
+  margin-top: 8px;
+  animation: fadeInUp 0.2s ease-out;
+}
+
+.popupHeader {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+}
+
+.popupHeader h4 {
+  margin: 0 0 4px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.english {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.popupContent {
+  padding: 16px;
+  line-height: 1.5;
+}
+
+.semitones {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #495057;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.nicknames {
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.nicknames strong {
+  color: #495057;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #495057;
+  line-height: 1.6;
+  padding: 8px 0;
+  border-top: 1px solid #e9ecef;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* 響應式設計 */
+@media (max-width: 480px) {
+  .popup {
+    min-width: 260px;
+    max-width: 90vw;
+    left: 0;
+    transform: none;
+    margin-left: -50px;
+  }
+
+  .popupContent {
+    padding: 12px;
+  }
+}
