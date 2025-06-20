@@ -1,0 +1,44 @@
+.container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.list {
+  display: grid;
+  gap: 1rem;
+}
+
+.demoCard {
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.demoCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.demoName {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  color: #667eea;
+}
+
+.demoDescription {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}

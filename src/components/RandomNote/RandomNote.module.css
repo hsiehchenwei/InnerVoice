@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.noteDisplay {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.controls {
+  margin-bottom: 2rem;
+}
+
+.info {
+  text-align: center;
+  color: #666;
+}
+
+.info p {
+  margin: 0;
+  font-size: 1rem;
+}

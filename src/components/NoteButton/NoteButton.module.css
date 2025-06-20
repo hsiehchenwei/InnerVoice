@@ -1,0 +1,73 @@
+.noteButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background: white;
+  border: 3px solid #667eea;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.noteButton:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-color: #5a67d8;
+}
+
+.noteButton:disabled {
+  background: #f7fafc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.noteName {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.tuningLabel {
+  font-size: 0.8rem;
+  color: #718096;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.noteButton:disabled .noteName {
+  color: #a0aec0;
+}
+
+.noteButton:disabled .tuningLabel {
+  color: #cbd5e0;
+}
+
+.playingIndicator {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.2rem;
+  color: #48bb78;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-3px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+}
